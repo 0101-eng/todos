@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ListFragment"
+    android:background="#ADF696"
+    >
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendar_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_showOtherDates="all"
+        app:mcv_selectionColor="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mcv_calendarMode="week"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todos_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_View"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_todo"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

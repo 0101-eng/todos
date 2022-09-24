@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddBottomSheetFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/add_new_task_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add new Task"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="18dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_task_tv"
+        android:layout_margin="8dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your task title"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title_edit_text"
+        android:layout_margin="8dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your task description"
+            android:lines="4"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/selected_date_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="12/12/2022"
+        app:layout_constraintTop_toBottomOf="@+id/description_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        />
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/selected_date_btn"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="18dp"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
